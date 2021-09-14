@@ -1,0 +1,52 @@
+<!DOCTYPE html>  
+<html>
+<head> <title> Calculadora Factorial </title> </head>
+<h1> Grupo 1: Briones - Clavijo  </h1>
+<br>
+<center> <h1> Realizar Factorial </h1>
+<body bgcolor="green">
+
+<br>
+
+<h2>Ingrese datos</h2>
+
+<div>
+  <label>Numero : </label>
+  <input id="num1"><br> 
+</div>
+
+
+ <p id="resultado"></p>
+ <button type="button" onclick="Factorial()">Factorial</button>
+
+<br>
+<br>
+<br>
+
+<script>
+
+function Factorial()
+        {
+     var result, num1, text;
+            num1 = document.getElementById("num1").value;
+
+            if (num1=="") {
+              text = "Es necesarios introducir un numero";
+            }else{
+              result=factorial(parseFloat(num1)); 
+              text = "Factorial es = "+result;
+            }
+            document.getElementById("resultado").innerHTML = text;
+        }
+
+function factorial (n) {
+  var total = 1; 
+  for (i=1; i<=n; i++) {
+    total = total * i; 
+  }
+  return total; 
+}
+</script>
+ </center>
+</body>
+</html> 
