@@ -21,6 +21,22 @@
 
 <br>
 <br>
+<center> <h1> Realizar Factorial de un numero primo</h1>
+<body bgcolor="green">
+
+<br>
+
+<h2>Ingrese datos</h2>
+
+<div>
+  <label>Numero primo: </label>
+  <input id="num2"><br> 
+</div>
+
+
+ <p id="resultado2"></p>
+ <button type="button" onclick="FactorialPrimo()">FactorialPrimo</button>
+
 <br>
 
 <script>
@@ -45,6 +61,31 @@ function factorial (n) {
     total = total * i; 
   }
   return total; 
+}
+
+function FactorialPrimo()
+        {
+     var result, num1, text;
+            num2 = document.getElementById("num2").value;
+
+            if (esPrimo(parseFloat(num2))) {
+              text = "El numero introducido no es primo";
+            }else{
+              result=factorial(parseFloat(num2)); 
+              text = "Factorial es = "+result;
+            }
+            document.getElementById("resultado2").innerHTML = text;
+        }
+
+function esPrimo(n){
+  var primo;
+  primo=true;
+  for (var i=2;i<n;i++){
+    if (n%i==0){
+      primo=false;
+    }
+  }
+  return primo;  
 }
 </script>
  </center>
